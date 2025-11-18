@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="700" prefWidth="600" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="application.MainController">
+    <children>
+        <VBox alignment="TOP_CENTER" layoutY="0.0" prefHeight="700" prefWidth="600" spacing="20">
+            <padding>
+                <Insets bottom="20" left="20" right="20" top="20" />
+            </padding>
+
+            <!-- Title -->
+            <Label styleClass="title-label" text="Weather" />
+
+            <!-- City input and theme toggle -->
+            <HBox alignment="CENTER" spacing="10">
+                <TextField fx:id="cityInput" promptText="Enter city..." styleClass="input-field" />
+                <Button fx:id="searchButton" styleClass="btn" text="Search" />
+                <ToggleButton fx:id="themeToggle" styleClass="toggle-btn" text="Dark Mode" />
+            </HBox>
+
+            <!-- Weather Icon -->
+            <ImageView fx:id="weatherIcon" fitHeight="100.0" fitWidth="100.0" />
+
+            <!-- Current weather card -->
+            <VBox fx:id="currentWeatherCard" alignment="CENTER" spacing="6" styleClass="card">
+                <padding>
+                    <Insets bottom="15" left="15" right="15" top="15" />
+                </padding>
+                <Label fx:id="cityLabel" text="City" />
+                <Label fx:id="tempLabel" text="--" />
+                <Label fx:id="feelsLabel" text="Feels like --" />
+                <Label fx:id="humidityLabel" text="Humidity --" />
+                <Label fx:id="cloudLabel" text="Cloud --" />
+                <Label fx:id="precipLabel" text="Precipitation --" />
+                <Label fx:id="timeLabel" text="--" />
+            </VBox>
+
+            <!-- Buttons for forecast/history -->
+            <HBox alignment="CENTER" spacing="15">
+                <Button fx:id="btn3Day" styleClass="btn" text="3-Day Forecast" />
+                <Button fx:id="btn7Day" styleClass="btn" text="7-Day History" />
+            </HBox>
+
+            <!-- Progress Indicator -->
+            <ProgressIndicator fx:id="progressIndicator" visible="false" />
+
+            <!-- Scrollable forecast cards -->
+            <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="AS_NEEDED" prefHeight="200.0" prefWidth="560.0" vbarPolicy="NEVER">
+                <content>
+                    <HBox fx:id="forecastCardContainer" alignment="CENTER_LEFT" spacing="15">
+                        <padding>
+                            <Insets bottom="10" left="10" right="10" top="10" />
+                        </padding>
+                    </HBox>
+                </content>
+            </ScrollPane>
+        </VBox>
+    </children>
+</AnchorPane>
