@@ -62,7 +62,7 @@ Run `Main.java` as a Java Application.
 
 ## 🧠 The Learning Journey
 
-Through this project I learned **API Integration:* This way I got to know how to construct HTTP requests and parse JSON responses to extract meaningful weather data.
+Through this project I learned **API Integration** This way I got to know how to construct HTTP requests and parse JSON responses to extract meaningful weather data.
 
 ---
 
