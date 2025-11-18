@@ -51,8 +51,8 @@ For security reasons, the API keys are not valid in this public repository. You 
 
 1. Get a free API Key from [WeatherAPI](https://www.weatherapi.com).
 2. Get a free API Key from [OpenCage Data](https://opencagedata.com/).
-3. Open the file: `src/application/MainController.java` (or your specific package path).
-4. Locate the variables for the keys and replace them:
+3. Open the file: `src/application/MainController.java` 
+4. Locate the variables for the keys and replace them.
 
 ### 4. Run the Application
 
