@@ -24,8 +24,8 @@ public class MainController {
     private GeocodingService geoService;
 
     public void initialize() {
-        String weatherApiKey = "5215afbd0d0149448bf174341252008";
-        String geoApiKey = "3a263a933e504cb3a68d623175cdccf3";
+        String weatherApiKey = " "; //author's note: put your api key here using any services
+        String geoApiKey = " "; // author's note: put your geolocation api key here
 
         weatherService = new WeatherAPIService(weatherApiKey);
         geoService = new GeocodingService(geoApiKey);
